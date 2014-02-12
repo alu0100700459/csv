@@ -1,0 +1,57 @@
+<html>
+  <head>
+     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+     <title>CSV Analyzer</title>
+     <link href="global.css" rel="stylesheet" type="text/css">
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+     <script type="text/javascript" src="csv.js"></script>
+  </head>
+  <body>
+    <div class="large-12 columns">
+        <h1>
+            Procesadores de Lenguajes - CSV 
+            <small>
+                Comma Separated Values
+            </small>
+        </h1>
+        <hr></hr>
+    </div>
+    <div>
+        <div class="large-9 columns">
+            <article>
+                <h3>
+                    <a href="#">
+                        Blog Post Title
+                    </a>
+                </h3>
+                <p>
+                    Descripción del rollo.
+                </p>
+                <p>
+                    Introduce aquí tu texto CSV.
+                    <textarea autofocus cols = "80" rows = "5" id="original"></textarea>
+                    <button type="button">Crear tabla</button><br>
+                </p>
+                <p>
+                    Tabla resultado:<br>
+                    <span class="output" id="finaltable"></span>
+                </p>
+            </article>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="large-12 columns">
+            <hr></hr>
+            <div class="large-6 columns">
+              <p>
+                © Sergio M. Afonso Fumero.
+              </p>
+            </div>
+        </div>
+    </footer>
+  </body>
+</html>
