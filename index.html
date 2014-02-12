@@ -1,57 +1,66 @@
-<html>
+﻿<html>
   <head>
      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-     <title>CSV Analyzer</title>
+     <title>Procesadores de Lenguajes - CSV</title>
      <link href="global.css" rel="stylesheet" type="text/css">
 
      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
      <script type="text/javascript" src="csv.js"></script>
+     <script type="text/html" id='fillTable'>
+       <table id="result" class="center">
+         <% _.each(items, function(name) { %>
+           <tr class="<%= name.rowClass %>">
+             <% _.each(name.value, function(cell) { %>
+               <td><%= cell %></td>
+             <% }); %>
+           </tr>
+         <% }); %>
+       </table>
+     </script>
   </head>
   <body>
-    <div class="large-12 columns">
+    <div class="big columns">
         <h1>
             Procesadores de Lenguajes - CSV 
             <small>
                 Comma Separated Values
             </small>
         </h1>
-        <hr></hr>
+        <hr/>
     </div>
-    <div>
-        <div class="large-9 columns">
-            <article>
-                <h3>
-                    <a href="#">
-                        Blog Post Title
-                    </a>
-                </h3>
-                <p>
-                    Descripci�n del rollo.
-                </p>
-                <p>
-                    Introduce aqu� tu texto CSV.
-                    <textarea autofocus cols = "80" rows = "5" id="original"></textarea>
-                    <button type="button">Crear tabla</button><br>
-                </p>
-                <p>
-                    Tabla resultado:<br>
-                    <span class="output" id="finaltable"></span>
-                </p>
-            </article>
-        </div>
+    <div class="medium columns">
+      <h3><a href="https://github.com/alu0100700459/csv">Repositorio en GitHub</a></h3>
+      <p>
+        Los ficheros CSV (del inglés comma-separated values) son un
+        tipo de documento en formato abierto sencillo para representar
+        datos en forma de tabla, en las que las columnas se separan
+        por comas y las filas por saltos de línea. Los campos que
+        contengan una coma, un salto de línea o una comilla doble
+        deben ser encerrados entre comillas dobles.
+        <a href="http://en.wikipedia.org/wiki/Comma-separated_values">Leer más</a>.
+      </p>
+      <p>
+        Esta página permite crear una tabla a partir de texto escrito
+        en formato CSV.
+      </p>
+      <p>
+        Introduce aquí tu texto CSV.
+        <textarea autofocus cols = "80" rows = "5" id="original"></textarea>
+        <button type="button">Crear tabla</button><br>
+      </p>
+      <h3>
+        Tabla resultado
+      </h3>
+      <span class="output" id="finaltable"></span>
     </div>
 
     <!-- Footer -->
-    <footer>
-        <div class="large-12 columns">
-            <hr></hr>
-            <div class="large-6 columns">
-              <p>
-                � Sergio M. Afonso Fumero.
-              </p>
-            </div>
-        </div>
-    </footer>
+    <div class="big columns">
+      <hr/>
+      <div class="small columns">
+        <p> &copy; Sergio M. Afonso Fumero. </p>
+      </div>
+    </div>
   </body>
 </html>

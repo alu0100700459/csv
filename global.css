@@ -1,12 +1,16 @@
-/* #finaltable * { color: white; background-color: black; } */
-
-/* #finaltable table { border-collapse:collapse; } */
-/* #finaltable table, td { border:1px solid white; } */
-#finaltable:hover td { background-color: rgb(0, 140, 186); }
-tr:nth-child(odd) { background-color:#eee; }
-tr:nth-child(even) { background-color:#00FF66; }
-input { text-align: right; border: none; } /* Align input to the right */
+#finaltable:hover td {
+    background-color: rgb(0, 186, 27);
+    transition: background-color 300ms ease-out 0s;
+}
+tr:nth-child(odd) { background-color: rgba(0, 140, 186, 0.85); }
+tr:nth-child(even) { background-color: rgba(0, 72, 186, 0.85); }
 #result { border-color: red; }
+
+input {
+    text-align: right;
+    border: none;
+}
+
 tr.error { background-color: red; }
 
 html, body { font-size: 100%; }
@@ -19,31 +23,26 @@ body {
   font-weight: normal;
   font-style: normal;
   line-height: 1;
-  position: relative;
-  cursor: default;
 }
 p {
   font-family: inherit;
   font-weight: normal;
   font-size: 1rem;
   line-height: 1.6;
+  width: 75%;
   margin-bottom: 1.25rem;
-  text-rendering: optimizelegibility;
 }
+h1 { font-size: 2.125rem; }
+h2 { font-size: 1.6875rem; }
+h3 { font-size: 1.375rem; }
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
     font-size: 60%;
     color: #6f6f6f;
     line-height: 0;
 }
-h1 { font-size: 2.125rem; }
-h2 { font-size: 1.6875rem; }
-h3 { font-size: 1.375rem; }
 a {
   color: rgb(0, 140, 186);
   text-decoration: none;
-  -moz-text-decoration-color: -moz-use-text-color;
-  -moz-text-decoration-line: none;
-  -moz-text-decoration-style: solid;
   line-height: inherit;
 }
 textarea {
@@ -57,19 +56,17 @@ textarea {
     font-size: 0.875rem;
     margin: 0px 0px 1rem;
     padding: 0.5rem;
-    height: 2.3125rem;
-    width: 100%;
-    -moz-box-sizing: border-box;
-    transition: all 0.15s linear 0s;
-}
-textarea {
-    height: auto;
-    min-height: 50px;
+    max-width: 75%;
+    min-height: 150px;
+    min-width: 25%;
 }
 table {
-    background: none repeat scroll 0% 0% white;
     margin-bottom: 1.25rem;
-    border-color: #6f6f6f;
+    border: 1px solid #6f6f6f;
+}
+table.center {
+    margin-left:auto;
+    margin-right:auto;
 }
 th, td {
     margin: 0px;
@@ -93,15 +90,16 @@ button, .button {
     border: medium none;
     font-weight: normal !important;
 }
-.large-12 {
+button:active, .button:active { background-color: rgb(0, 186, 27); }
+.big {
     position: relative;
     width: 100%;
 }
-.large-9 {
+.medium {
     position: relative;
     width: 75%;
 }
-.large-6 {
+.small {
     position: relative;
     width: 50%;
 }
